@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+    <link rel="stylesheet" href="/CurrencyToday/css/style.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <title>Error 403</title>
+
+    <!--favicon-->
+    <link rel="apple-touch-icon" sizes="180x180" href="/CurrencyToday/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/CurrencyToday/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/CurrencyToday/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/CurrencyToday/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/CurrencyToday/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+</head>
+
+<body id="error">
+
+<div id="wrapper">
+
+    <!--Sidebar-->
+    <div id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="/CurrencyToday/index.html">
+                    <img src="/CurrencyToday/images/CurrencyToday.svg" alt="coin" class="logo">
+                </a>
+            </li>
+            <li>
+                <a href="/CurrencyToday/soorten.html">Soorten</a>
+            </li>
+            <li>
+                <a href="/CurrencyToday/beheren.html">Beheren</a>
+            </li>
+            <li>
+                <a href="/CurrencyToday/informatie.html">Informatie</a>
+            </li>
+            <li>
+                <a href="/CurrencyToday/betalen.html">Betalen</a>
+            </li>
+            <li>
+                <a href="#menu-show" id="menu-show"><i class="fas fa-bars"></i> Sluit Menu</a>
+            </li>
+        </ul>
+    </div>
+
+    <nav class="navbar navbar-dark ">
+        <div>
+            <a href="/CurrencyToday/index.html"><img src="/CurrencyToday/images/CurrencyToday.svg" class="logo" alt="logo"></a>
+        </div>
+        <div class="btn" id="menu-toggle">
+            <span class="navbar-toggler-icon"></span>
+        </div>
+
+    </nav>
+
+
+    <main role="main">
+        <div class="middle">
+
+            <div class="container text-center kader">
+                <h1>403 - No access</h1>
+                <h2>Hello, is it this 403 page you're looking for?</h2>
+                <a href="/../index.html" class="btn btn-secondary my-2 bg-dark align-content-center">Terug naar Homepage</a>
+
+            </div>
+        </div>
+    </main>
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="js/scroll-trigger.min.js"></script>
+<script>
+    $(document).ready(function() {
+        if ($(window).width() < 500) {
+            $('#menu-toggle').click(function() {
+                $('#page-content-wrapper').hide();
+                $('footer').hide();
+            });
+            $('#menu-show').click(function() {
+                $('#page-content-wrapper').show();
+                $('footer').show();
+            });
+        }
+
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        $("#menu-show").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    });
+</script>
+</body>
+</html>
